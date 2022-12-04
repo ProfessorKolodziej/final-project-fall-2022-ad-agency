@@ -1,6 +1,3 @@
-import * as icons from '../images/icons.js';
-//icons.favicon
-
 const url = 'https://api.baserow.io/api/database/rows/table/115440/?user_field_names=true';
 
 const list = document.querySelector('#list');
@@ -12,7 +9,7 @@ fetch(url, { headers: { Authorization: `Token woLMVJy43hZwBu44UBVYVabQyulxwTOw` 
       console.log(data.results[i]);
       
       const markup = `<li>
-        <div class="Logos">${data.results[i]["Logos"][0].url}</div>
+        <img class="Logos" src = ${data.results[i]["Logos"][0].url}>
         <h2>${data.results[i]["Agency Name"]}</h2> 
         <div class="Locations">${data.results[i]["Locations"]}</div>
       </li>`
