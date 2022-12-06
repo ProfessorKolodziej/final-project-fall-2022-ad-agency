@@ -14,18 +14,19 @@ function buildHTML(data) {
 </li>`;
 
 		list.insertAdjacentHTML('beforeend', markup);
-	}};
+	}
+}
 async function getData() {
 	await fetch(url, { headers: { Authorization: 'Token woLMVJy43hZwBu44UBVYVabQyulxwTOw' } })
 		.then((response) => response.json())
 		.then((data) => {
 			storedData = data.results;
-buildHTML(storedData);
+			buildHTML(storedData);
 		});
 }
 // eslint-disable-next-line
 getData().then((result) => {
-	const filtered = storedData.filter((item) => item['Locations'].includes("Boston"));
-	buildHTML(filtered); 
-	console.log(filtered); 
+	const filtered = storedData.filter((item) => item.Locations.includes('Boston'));
+	buildHTML(filtered);
+	console.log(filtered);
 });
