@@ -24,7 +24,6 @@ async function getData() {
 		.then((response) => response.json())
 		.then((data) => {
 			storedData = data.results;
-			// buildHTML(storedData);
 		});
 }
 getData().then((result) => {
@@ -32,6 +31,10 @@ getData().then((result) => {
 	buildHTML(filtered);
 	console.log(filtered);
 });
+
+let onclick = "buildBoston"() => {
+	getData(storedData.filtered)
+};
 
 let x = "all";
 
@@ -53,7 +56,7 @@ function build(){
 	if (x == "all"){
 		buildAll();
 	}
-	then{
+	then {
 		buildBoston();
 	}
 }
