@@ -1,3 +1,5 @@
+const { run } = require('jest');
+
 const url = 'https://api.baserow.io/api/database/rows/table/115440/?user_field_names=true';
 
 const list = document.querySelector('#list');
@@ -21,12 +23,45 @@ async function getData() {
 		.then((response) => response.json())
 		.then((data) => {
 			storedData = data.results;
-			buildHTML(storedData);
+			// buildHTML(storedData);
+			return storedData;
 		});
 }
+/*
+let x = "all";
+
+let changeBoston = () => {
+	x = "boston";
+}
+
+let buildBoston = () => {
+	const filtered = storedData.filter((item) => item.Locations.includes('Boston'));
+	buildHTML(filtered);
+	console.log(filtered);
+}
+
+let buildAll = () => {
+	buildHTML(storedData);
+	console.log(storedData);
+}
+
+function build(){
+	if (x == "all"){
+		buildAll();
+	}
+	else{
+		buildBoston();
+	}
+}
+*/
 // eslint-disable-next-line
+
+// onclick = buildBoston()
 getData().then((result) => {
 	const filtered = storedData.filter((item) => item.Locations.includes('Boston'));
 	buildHTML(filtered);
 	console.log(filtered);
 });
+
+// <input type="button">
+// <button>
