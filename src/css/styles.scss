@@ -1,42 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins&display=swap');
 
-body {
-	background-color: #e0ebf2;
+@media (min-width: 320px),
+	(max-width: 1200px) {
+
+	body { background-color: #e0ebf2; }
+
+	p {
+		font-family: Poppins, sans-serif;
+		font-size: 10pt;
+		color: #3e597a;
+		text-align: center;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.Adbase {
+		font-family: Manrope, sans-serif;
+		font-size: 15pt;
+		font-weight: bold;
+		margin: 5px;
+		padding-left: 5px;
+	}
+
+	.Database {
+		font-family: Poppins, sans-serif;
+		font-size: 10pt;
+		align-items: right;
+		margin: 5px;
+		padding-right: 5px;
+	}
+
+	a:link {
+		color: #3e597a;
+	}
+
+	a:visited {
+		color: #3e597a;
+	}
+
+	a:hover {
+		color: #ee6c4d;
+	}
+
+	a:active {
+		color: #ee6c4d;
+	}
 }
 
-.title {
-	font-family: Manrope, sans-serif;
-	color: #293241;
-	text-align: center;
+.border {
+	border: solid 30px;
+	border-color: #92aac8;
 }
 
-.about {
-	font-family: Manrope, sans-serif;
-	color: #293241;
-	text-align: center;
-}
-
-p {
-	font-family: Poppins, sans-serif;
-	color: #3e597a;
-	text-align: center;
-}
-
-.Adbase {
-	font-family: Manrope, sans-serif;
-	font-weight: bold;
-	text-align: left;
-}
-
-.link {
-	color: #ee6c4d;
-}
-
-img {
-	display: block;
-	margin: auto;
-}
-
-nav {
-	text-align: right;
+.content {
+	margin: 30px;
+	justify-content: center;
 }
