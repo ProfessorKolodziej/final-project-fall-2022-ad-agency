@@ -25,15 +25,23 @@ async function getData() {
 		.then((data) => {
 			storedData = data.results;
 			// buildHTML(storedData);
-			return storedData;
 		});
 }
-/*
+getData().then((result) => {
+	const filtered = storedData.filter((item) => item.Locations.includes('Boston'));
+	buildHTML(filtered);
+	console.log(filtered);
+});
+
 let x = "all";
 
-let changeBoston = () => {
-	x = "boston";
-}
+let buildAll = () => {
+	buildHTML(storedData);
+	console.log(storedData);
+
+	let changeBoston = () => {
+		x = "boston";
+	}}
 
 let buildBoston = () => {
 	const filtered = storedData.filter((item) => item.Locations.includes('Boston'));
@@ -41,32 +49,16 @@ let buildBoston = () => {
 	console.log(filtered);
 }
 
-let buildAll = () => {
-	buildHTML(storedData);
-	console.log(storedData);
-}
-
 function build(){
 	if (x == "all"){
 		buildAll();
 	}
-	else{
+	then{
 		buildBoston();
 	}
 }
-*/
+
 // eslint-disable-next-line
-
-// onclick = buildBoston()
-getData().then((result) => {
-	const filtered = storedData.filter((item) => item.Locations.includes('Boston'));
-	buildHTML(filtered);
-	console.log(filtered);
-});
-
-// <input type="button">
-// <button>
-
 fetch(url, { headers: { Authorization: 'Token woLMVJy43hZwBu44UBVYVabQyulxwTOw' } })
 	.then((response) => response.json())
 	.then((data) => {
@@ -82,4 +74,3 @@ fetch(url, { headers: { Authorization: 'Token woLMVJy43hZwBu44UBVYVabQyulxwTOw' 
 			list.insertAdjacentHTML('beforeend', markup);
 		}
 	});
-
