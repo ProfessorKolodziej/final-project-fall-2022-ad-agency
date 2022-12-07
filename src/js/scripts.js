@@ -32,7 +32,37 @@ getData().then((result) => {
 	console.log(filtered);
 });
 
+
 //let onclick = "buildBoston"() => {
+
+let onclick = "buildBoston"() => {
+	getData(storedData.filtered)
+};
+
+let x = "all";
+
+let buildAll = () => {
+	buildHTML(storedData);
+	console.log(storedData);
+
+	let changeBoston = () => {
+		x = "boston";
+	}}
+
+let buildBoston = () => {
+	const filtered = storedData.filter((item) => item.Locations.includes('Boston'));
+	buildHTML(filtered);
+	console.log(filtered);
+}
+
+function build(){
+	if (x == "all"){
+		buildAll();
+	}
+	then {
+		buildBoston();
+	}
+}
 
 // eslint-disable-next-line
 fetch(url, { headers: { Authorization: 'Token woLMVJy43hZwBu44UBVYVabQyulxwTOw' } })
