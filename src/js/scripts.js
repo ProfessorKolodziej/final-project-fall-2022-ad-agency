@@ -9,6 +9,7 @@ function buildHTML(data) {
 	for (let i = 0; i < data.length; i++) {
 		console.log(data[i]);
 
+<<<<<<< HEAD
 		const markup = `<li>
 <img class="Logos" src = ${data[i].Logos[0].url}>
 <h2>${data[i]['Agency Name']}</h2> 
@@ -65,3 +66,20 @@ getData().then((result) => {
 
 // <input type="button">
 // <button>
+=======
+fetch(url, { headers: { Authorization: 'Token woLMVJy43hZwBu44UBVYVabQyulxwTOw' } })
+	.then((response) => response.json())
+	.then((data) => {
+		for (let i = 0; i < data.results.length; i++) {
+			console.log(data.results[i]);
+
+			const markup = `<li>
+        <img class="Logos" src = ${data.results[i].Logos[0].url}>
+        <h2>${data.results[i]['Agency Name']}</h2> 
+        <div class="Locations">${data.results[i].Locations}</div>
+      </li>`;
+
+			list.insertAdjacentHTML('beforeend', markup);
+		}
+	});
+>>>>>>> 1466196 (More CSS)
