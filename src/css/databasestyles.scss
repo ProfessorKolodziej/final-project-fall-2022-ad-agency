@@ -5,34 +5,11 @@
 
 	body { background-color: #e0ebf2; }
 
-	.title {
-		font-family: Manrope, sans-serif;
-		font-size: 36pt;
-		color: #293241;
-		text-align: center;
-	}
-
-	.about {
-		font-family: Manrope, sans-serif;
-		font-size: 24pt;
-		color: #293241;
-		text-align: center;
-	}
-
 	p {
 		font-family: Poppins, sans-serif;
 		font-size: 10pt;
 		color: #3e597a;
 		text-align: center;
-	}
-
-	img {
-		display: block;
-		margin: auto;
-		border: 5px;
-		border-style: solid;
-		border-color: #3e597a;
-		max-width: 60%;
 	}
 
 	nav {
@@ -71,23 +48,14 @@
 	a:active {
 		color: #ee6c4d;
 	}
-
-	.asterisk {
-		font-size: 7pt;
-		padding-top: 10px;
-	}
-
-	hr {
-		border-color: #3e597a;
-	}
-}
-
+    }
+    
 .border {
-	border: solid 30px;
-	border-color: #92aac8;
+	border: solid 10px;
+	border-color: #3e597a;
 }
 
 .content {
-	margin: 30px;
-	justify-content: center;
+	margin: 20px;
+	padding: 20px;
 }
