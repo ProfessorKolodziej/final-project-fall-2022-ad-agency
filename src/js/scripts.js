@@ -46,7 +46,9 @@ const buildBoston = () => {
 };
 
 const buildBostonButton = document.querySelector('#buildBoston');
-buildBostonButton.addEventListener('click', buildBoston);
+if (buildBostonButton !== null) {
+	buildBostonButton.addEventListener('click', buildBoston);
+}
 
 // Build the initial list when the page loads.
 getData();
